@@ -76,7 +76,7 @@
     // Bail if the input is empty
     if (!question.value.trim()) return;
 
-    // Display the question and answer
+    // Display the answer
     answer.textContent = getAnswer();
 
     // Clear the question field and return focus to it
