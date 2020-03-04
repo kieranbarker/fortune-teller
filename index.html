@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="See into the future! A fortune-telling app that provides answers to any question.">
+    <title>Fortune Teller</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <style>*,*::before,*::after{box-sizing:border-box}ul[class],ol[class]{padding:0}body,h1,h2,h3,h4,p,ul[class],ol[class],figure,blockquote,dl,dd{margin:0}body{min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed;line-height:1.5}ul[class],ol[class]{list-style:none}a:not([class]){text-decoration-skip-ink:auto}img{max-width:100%;display:block}article>*+*{margin-top:1em}input,button,textarea,select{font:inherit}img:not([alt]){filter:blur(10px)}@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}body{width:88%;max-width:34em;margin:1em auto;background:url(assets/images/nebula.jpg) repeat;color:white;text-shadow:2px 2px 2px black;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";}h1{margin-bottom:.5em;}label,input{display:block;}label{font-weight:bold;}input{width:100%;margin:.25em 0 1em;}p{margin:1em 0;}</style>
+  </head>
+  <body>
+    <h1>Fortune Teller 🔮</h1>
+
+    <form id="app">
+      <label for="question">What's your question?</label>
+      <input id="question" type="text" autofocus>
+      <button type="submit">Ask the Fortune Teller</button>
+    </form>
+
+    <p id="answer" aria-live="polite"></p>
+
+    <script>!function(){"use strict";var e=document.querySelector("#app"),t=e.querySelector("#question"),n=document.querySelector("#answer"),o=["Yes! Yes! YES! Oh my god, YES!","I've never been more sure of anything in my life.","Without a doubt.","No. Absolutely and unequivocally, NO.","Negative. Nein. Negatory. Nope. The point is, the answer is NO, OK?","LOL, don't be daft.","The dark side clouds everything. Impossible to see, the future is.","The answer might be yes... But it could be no. Damn it, I can't be sure. Maybe!","I'm not sure... I need time to think. Ask me again?"],r=function(){return function(e){for(var t,n,o=e.length;0!==o;)n=Math.floor(Math.random()*o),t=e[o-=1],e[o]=e[n],e[n]=t;return e}(o.slice())[0]};e.addEventListener("submit",function(e){e.preventDefault(),t.value.trim()&&(n.textContent=r(),t.value="",t.focus())},!1)}();</script>
+  </body>
+</html>
